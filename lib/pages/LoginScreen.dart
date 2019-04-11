@@ -23,6 +23,8 @@ class _LoginScreenState extends State<LoginScreen> {
                Navigator.of(context).push(route); 
       });
     }
+
+    // TextField Nombre de usuario
     final nombre =TextField(
       keyboardType: TextInputType.text,
       controller: txtNombre,
@@ -42,6 +44,7 @@ class _LoginScreenState extends State<LoginScreen> {
       ),
     );
 
+    // TextField Token validator
     final validator =TextField(
       keyboardType: TextInputType.number,
       controller: txtValidator,
@@ -64,6 +67,7 @@ class _LoginScreenState extends State<LoginScreen> {
       ),
     );
 
+  // Button Login
     final boton =Center(
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 16.0),
@@ -82,6 +86,7 @@ class _LoginScreenState extends State<LoginScreen> {
       ),
     );
 
+    // Linea para poner la barra del mismo color
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
       statusBarColor:  Color(0xFFd2dae2),
       statusBarIconBrightness: Brightness.light,
@@ -118,7 +123,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 InkWell(
                     child: Text('How dows this work?', style: TextStyle(color: Color(0xFFeb3b5a), fontSize: 20.0), textAlign: TextAlign.right,),
                     onTap: (){
-                      print('Funciona');
+                     
                     },
                   ),
                 Padding(
