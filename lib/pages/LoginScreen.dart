@@ -31,6 +31,8 @@ class _LoginScreenState extends State<LoginScreen> {
       style: TextStyle(color: Color(0xFFeb3b5a)),
       decoration: InputDecoration(
         labelText: "Nombre",
+        filled: true,
+        fillColor: Colors.white,
         labelStyle: TextStyle(color: Color(0xFFeb3b5a)),
         border: OutlineInputBorder(),
         enabledBorder: OutlineInputBorder(
@@ -53,6 +55,8 @@ class _LoginScreenState extends State<LoginScreen> {
       style: TextStyle(color:Color(0xFFeb3b5a), letterSpacing: 30.0),
       decoration: InputDecoration(   
         labelText: "TOKEN",
+        filled: true,
+        fillColor: Colors.white,
         labelStyle: TextStyle(color: Color(0xFFeb3b5a),letterSpacing: 0),
         helperStyle: TextStyle(color: Color(0xFFeb3b5a)),
         border: OutlineInputBorder(),
@@ -88,11 +92,11 @@ class _LoginScreenState extends State<LoginScreen> {
 
     // Linea para poner la barra del mismo color
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-      statusBarColor:  Color(0xFFd2dae2),
+      statusBarColor:  Color(0xFFd1ccc0),
       statusBarIconBrightness: Brightness.light,
     ));
     return Scaffold( 
-      backgroundColor: Color(0xFFd2dae2),
+      backgroundColor: Color(0xFFd1ccc0),
       body: Center(
        child:ListView(
         
@@ -100,8 +104,18 @@ class _LoginScreenState extends State<LoginScreen> {
            Container(
             width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height/2,
+            
             child:Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               
+              children: <Widget>[
+                Container(
+                  child: Image.asset("assets/images/LogoEnigma.png", width: 260.0, height: 260.0,),
+                  padding: const EdgeInsets.all(2.0), // borde width
+                  
+                ),
+              ],
             ),
          ),
          Container(
